@@ -5,7 +5,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.study.rxandroid.RxJavaUtils.CommonUtils;
+import com.study.rxandroid.RxJavaUtils.Functions.SwitchMap;
+import com.study.rxandroid.RxJavaUtils.Log;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +17,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mTestTextview = findViewById(R.id.testview);
+
+        new SwitchMap();
+        SwitchMap.fun();
+
     }
 
     @Override
