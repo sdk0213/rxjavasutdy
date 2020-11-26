@@ -5,6 +5,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.study.rxandroid.RxJavaUtils.Functions.GroupBy;
 import com.study.rxandroid.RxJavaUtils.Functions.SwitchMap;
 import com.study.rxandroid.RxJavaUtils.Log;
 
@@ -18,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
         mTestTextview = findViewById(R.id.testview);
 
-        new SwitchMap();
-        SwitchMap.fun();
+        new GroupBy();
+        GroupBy.fun();
 
     }
 
