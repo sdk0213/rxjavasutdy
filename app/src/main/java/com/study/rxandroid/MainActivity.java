@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         mTestTextview = findViewById(R.id.testview);
 
         new Zip();
-        Zip.fun();
+        Zip.zipinterval();
 
     }
 

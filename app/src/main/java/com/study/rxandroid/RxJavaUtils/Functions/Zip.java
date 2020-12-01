@@ -1,6 +1,9 @@
 package com.study.rxandroid.RxJavaUtils.Functions;
 
+import com.study.rxandroid.RxJavaUtils.CommonUtils;
 import com.study.rxandroid.RxJavaUtils.Log;
+
+import java.util.concurrent.TimeUnit;
 
 import io.reactivex.rxjava3.core.Observable;
 
@@ -18,6 +21,28 @@ public class Zip {
         source.subscribe(Log::it);
 
     }
+
+    public static void zipNumbers(){
+        Observable<Integer> source = Observable.zip(
+                Observable.just(100, 200, 300),
+                Observable.just(10, 20, 30),
+                Observable.just(1, 2, 3),
+                (a, b, c) -> a + b + c );
+        source.subscribe(Log::it);
+    }
+
+
+    public static void zipinterval(){
+        Observable<String> source = Observable.zip(
+                Observable.just("RED", "GREEN", "BLUE"),
+                Observable.interval(200L, TimeUnit.MILLISECONDS),
+                (value, i) -> value);
+
+        CommonUtils.exampleStart();
+        source.subscribe(Log::it);
+        CommonUtils.sleep(1000);
+    }
+
 
 }
 
