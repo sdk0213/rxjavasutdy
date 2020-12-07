@@ -5,7 +5,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.study.rxandroid.RxJavaUtils.Functions.CombineLatest;
 import com.study.rxandroid.RxJavaUtils.Functions.GroupBy;
+import com.study.rxandroid.RxJavaUtils.Functions.Merge;
 import com.study.rxandroid.RxJavaUtils.Functions.Scan;
 import com.study.rxandroid.RxJavaUtils.Functions.SwitchMap;
 import com.study.rxandroid.RxJavaUtils.Functions.Zip;
@@ -21,8 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         mTestTextview = findViewById(R.id.testview);
 
-        new Zip();
-        Zip.caleleBill();
+        Merge.fun();
 
     }
 
