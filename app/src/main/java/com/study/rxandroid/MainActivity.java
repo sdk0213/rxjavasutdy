@@ -6,6 +6,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.study.rxandroid.RxJavaUtils.Functions.CombineLatest;
+import com.study.rxandroid.RxJavaUtils.Functions.Concat;
 import com.study.rxandroid.RxJavaUtils.Functions.GroupBy;
 import com.study.rxandroid.RxJavaUtils.Functions.Merge;
 import com.study.rxandroid.RxJavaUtils.Functions.Scan;
@@ -15,15 +16,12 @@ import com.study.rxandroid.RxJavaUtils.Log;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView mTestTextview;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTestTextview = findViewById(R.id.testview);
-
-        Merge.fun();
+        Concat.fun();
 
     }
 
