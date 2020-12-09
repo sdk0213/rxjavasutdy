@@ -5,6 +5,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.study.rxandroid.RxJavaUtils.Functions.Amb;
 import com.study.rxandroid.RxJavaUtils.Functions.CombineLatest;
 import com.study.rxandroid.RxJavaUtils.Functions.Concat;
 import com.study.rxandroid.RxJavaUtils.Functions.GroupBy;
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Concat.fun();
+        Amb.fun();
 
     }
 
