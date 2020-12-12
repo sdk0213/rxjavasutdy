@@ -9,6 +9,8 @@ public class Shape {
     public static final String PENTAGON = "PENTAGON";
     public static final String BALL = "BALL";
     public static final String STAR = "STAR";
+    public static final String NO_SHAPE = "NO_SHAPE";
+    public static final String FLIPPED = "(flipped)";
 
     public static String getColor(String shape) {
         if (shape.endsWith("◇"))  // 다이아몬드 표시.
@@ -30,5 +32,17 @@ public class Shape {
         if (PENTAGON.equals(shape)) return "-P";
         if (STAR.equals(shape)) return "-S";
         return "";    // 원의 경우
+    }
+
+    public static String getShape(String obj) {
+        if (obj == null || obj.equals("")) return NO_SHAPE;
+        if (obj.endsWith("-H")) return HEXAGON;
+        if (obj.endsWith("-O")) return OCTAGON;
+        if (obj.endsWith("-R")) return RECTANGLE;
+        if (obj.endsWith("-T")) return TRIANGLE;
+        if (obj.endsWith("<>")) return DIAMOND;
+        if (obj.endsWith("-P")) return PENTAGON;
+        if (obj.endsWith("-S")) return STAR;
+        return "BALL";
     }
 }
