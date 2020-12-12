@@ -10,6 +10,7 @@ import com.study.rxandroid.RxJavaUtils.Functions.Amb;
 import com.study.rxandroid.RxJavaUtils.Functions.CombineLatest;
 import com.study.rxandroid.RxJavaUtils.Functions.Concat;
 import com.study.rxandroid.RxJavaUtils.Functions.GroupBy;
+import com.study.rxandroid.RxJavaUtils.Functions.MathFunction;
 import com.study.rxandroid.RxJavaUtils.Functions.Merge;
 import com.study.rxandroid.RxJavaUtils.Functions.Scan;
 import com.study.rxandroid.RxJavaUtils.Functions.SkipUntil;
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        All.fun();
+        MathFunction.fun();
     }
 
     @Override
