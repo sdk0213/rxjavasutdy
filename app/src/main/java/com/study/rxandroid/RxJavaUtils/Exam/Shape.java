@@ -45,4 +45,22 @@ public class Shape {
         if (obj.endsWith("-S")) return STAR;
         return "BALL";
     }
+
+    public static String flip(String item) throws ShapeCannotFlipException {
+        if(item.startsWith(FLIPPED)) {
+            return item.replace(FLIPPED, "");
+        }
+
+        String shape = getShape(item);
+        switch(shape) {
+            case BALL:
+            case RECTANGLE:
+            case DIAMOND:
+            case NO_SHAPE:
+                throw new ShapeCannotFlipException();
+                //return "throw new ShapeCannotFlipException()";
+        };
+
+        return FLIPPED + item;
+    }
 }
