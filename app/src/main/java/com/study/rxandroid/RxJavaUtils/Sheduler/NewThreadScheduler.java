@@ -7,7 +7,7 @@ import com.study.rxandroid.RxJavaUtils.Log;
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
-public class NewThread {
+public class NewThreadScheduler {
 
     public static void flip(){
         String[] objs = {"1-S", "2-T", "3-P"};

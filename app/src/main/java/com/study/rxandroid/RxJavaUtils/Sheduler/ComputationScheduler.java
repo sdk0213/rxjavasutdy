@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
-public class Computation {
+public class ComputationScheduler {
 
     public static void interval(){
         String[] orgs = {"1", "3", "5"};

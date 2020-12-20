@@ -8,7 +8,7 @@ import java.io.File;
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
-public class IO {
+public class IOScheduler {
 
     public static void getListofFiles(){
         String root = "etc/permissions/";
